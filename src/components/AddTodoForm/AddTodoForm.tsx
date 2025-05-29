@@ -71,12 +71,12 @@ export const AddTodoForm: React.FC<Props> = ({
   return (
     <form onSubmit={handleSubmit}>
       <div className="field">
-        <label htmlFor="titleInput">Title</label>
+        <label htmlFor="titleInput">Title: </label>
         <input
           id="titleInput"
           type="text"
           data-cy="titleInput"
-          placeholder="Enter todo title"
+          placeholder="Enter a title"
           value={title}
           onChange={event => {
             setTitle(event.target.value);
@@ -90,6 +90,7 @@ export const AddTodoForm: React.FC<Props> = ({
       </div>
 
       <div className="field">
+        <label htmlFor="userSelect">User: </label>
         <select
           data-cy="userSelect"
           id="userSelect"
